@@ -41,6 +41,7 @@ int main(int manyArgc, char *argc[])
     if(manyArgc == 2){
         printf("\nFail to login !!\n");
         printf("Anda belum memasukkan password !!\n");
+        printf("tes");
     }
 
     if(manyArgc == 3)
