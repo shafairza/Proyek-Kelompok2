@@ -10,7 +10,7 @@ typedef struct registration
     char password[20];
 } regis;
 
-    void mainkan_quiz() {
+    void jalankan_quiz() {
     char pertanyaan[100] = "Siapakah Musliadi?";
     char jawaban[20] = "gatau";
 
@@ -37,16 +37,12 @@ int main(int manyArgc, char *argc[])
         printf("Nama\t\t: "); gets(reg.nama);
         printf("Umur\t\t: "); gets(reg.umur);
         printf("\n");
-        system("cls");
         printf("\tLets create your account <3\n");
         printf("Username\t: "); gets(reg.username);
         printf("Password\t: "); gets(reg.password);
-        system("cls");
         printf("\nCreate Account Success !!\n");
-        system("cls");
         printf("Let's login and enjoy the game <3 !\n");
-        printf("Silahkan Masukan ./main Username Pasword");
-
+        
         FILE *fpw = fopen("database/login.bin", "wb");
 
         char insl[3] = "#";
@@ -61,7 +57,6 @@ int main(int manyArgc, char *argc[])
     if(manyArgc == 2){
         printf("\nFail to login!!\n");
         printf("Anda Belum Memasukkan Password !!\n");
-        system("cls");
     }
 
     if(manyArgc == 3)
@@ -94,22 +89,19 @@ int main(int manyArgc, char *argc[])
             printf("***********\n");
             printf("Selamat Anda Berhasil Login !\n");
             printf("***********\n");
-            system("cls");
 
         char jawaban;
         printf("Apakah Anda ingin melanjutkan ke quiz? (y/n) ");
         scanf(" %c", &jawaban);
         if (jawaban == 'y') {
-            system("cls");
-            mainkan_quiz();
+            jalankan_quiz();
         } else {
-            printf("Terima kasih telah menggunjungi  Brain Buster.\n");
+            printf("Terima kasih telah menggunjungi Brain Buster.\n");
         }
         }  else {
                 printf("Anda Gagal login !\n");
-                printf("\t\t\t!!!PERINGATAN!!! \n");
+                printf("!!!Peringatan!!!");
                 printf("Perhatikan Kembali Username dan Passsword Yang Anda Masukkan !!\n\n");
-                system("cls");
          }
  }
     return 0;
