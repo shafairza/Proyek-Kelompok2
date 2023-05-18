@@ -89,6 +89,66 @@ int main(int manyArgc, char *argc[])
             printf("Successfully Login!\n");
             printf("***********\n");
             system("cls");
+
+            int mulai = 0;
+            while (mulai < 1 || mulai > 2)
+            {
+                printf("Apakah Anda ingin melanjutkan ke quiz?\n");
+                printf("1 = yay\n");
+                printf("2 = nay\n");
+                printf("1/2: ");
+                scanf("%d", &mulai);
+                system("cls");
+                if (mulai < 1 || mulai > 2)
+                {
+                    printf("Pilih Jawaban Yang Kamu Anggap Benar");
+                }
+
+                if (mulai == 1)
+                {
+                    int skor = 0;
+
+                    soal1(&skor);
+                    soal2(&skor);
+                    soal3(&skor);
+                    soal4(&skor);
+                    soal5(&skor);
+
+                    point(skor);
+                }
+            }
+        }
+        else
+        {
+            printf("\t\t\tAnda Gagal login !\n");
+            printf("\t\t\t!!!PERINGATAN!!! \n");
+            printf("Perhatikan Kembali Username dan Passsword Yang Anda Masukkan !!\n\n");
         }
     }
+    return 0;
+}
+
+void soal1(int *skor)
+{
+    printf("Soal 1: Jika POST adalah 1234 dan FLIRT adalah 56784 maka FROST adalah?\n");
+    printf("a. gatau\n");
+    printf("b. 58234\n");
+    printf("c. 58243\n");
+    printf("d. 52384\n");
+    printf("Jawaban Anda (a/b/c/d): ");
+
+    char jawaban[10];
+    scanf("%s", jawaban);
+
+    if (strcmp(jawaban, "b") == 0)
+    {
+        printf("Jawaban Anda benar!\n");
+        *skor += 1;
+    }
+    else
+    {
+        printf("Jawaban Anda salah!\n");
+    }
+
+    printf("\n");
 }
