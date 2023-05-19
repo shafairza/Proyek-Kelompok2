@@ -252,3 +252,37 @@ void soal5(int *skor)
 
     printf("\n");
 }
+
+void point(int skor)
+{
+    if (skor == 5)
+    {
+        printf("Congrast! You're Answer correctly!\n");
+        printf("You're currently score 100 points");
+    }
+    else if (skor == 4)
+    {
+        printf("Congrast! You're Answer correctly!\n");
+        printf("You're currently score 80 points");
+    }
+    else if (skor == 3)
+    {
+        printf("Congrast! You're Answer correctly!\n");
+        printf("You're currently score 60 points");
+    }
+    else if (skor == 2)
+    {
+        printf("Congrast! You're Answer correctly!\n");
+        printf("You're currently score 40 points");
+    }
+    else if (skor == 1)
+    {
+        printf("Congrast! You're Answer correctly!\n");
+        printf("You're currently score 20 points");
+    }
+    else 
+    {
+        printf("Sorry! You're Answer uncorrectly!\n");
+        printf("Fighting and Try Again!!");
+    }
+}
