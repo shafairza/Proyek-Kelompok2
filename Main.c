@@ -63,7 +63,7 @@ int main(int manyArgc, char *argc[])
         char usernameInput[10], passwordInput[10];
         strcpy(usernameInput, argc[1]);
         strcpy(passwordInput, argc[2]);
-
+        
         FILE *fpr = fopen("database/login.bin", "rb");
 
         fread(reg.username, sizeof(char), sizeof(reg.username) / sizeof(char), fpr);
@@ -98,7 +98,7 @@ int main(int manyArgc, char *argc[])
                 printf("2 = nay\n");
                 printf("1/2: ");
                 scanf("%d", &mulai);
-                system("cls");
+            system("cls");
                 if (mulai < 1 || mulai > 2)
                 {
                     printf("Pilih Jawaban Yang Kamu Anggap Benar");
@@ -121,10 +121,10 @@ int main(int manyArgc, char *argc[])
         else
         {
             printf("\t\t\tAnda Gagal login !\n");
-            printf("\t\t\t!!!PERINGATAN!!! \n");
-            printf("Perhatikan Kembali Username dan Passsword Yang Anda Masukkan !!\n\n");
-        }
-    }
+                printf("\t\t\t!!!PERINGATAN!!! \n");
+                printf("Perhatikan Kembali Username dan Passsword Yang Anda Masukkan !!\n\n");
+         }
+ }
     return 0;
 }
 
@@ -141,6 +141,106 @@ void soal1(int *skor)
     scanf("%s", jawaban);
 
     if (strcmp(jawaban, "b") == 0)
+    {
+        printf("Jawaban Anda benar!\n");
+        *skor += 1;
+    }
+    else
+    {
+        printf("Jawaban Anda salah!\n");
+    }
+
+    printf("\n");
+}
+
+void soal2(int *skor)
+{
+    printf("Soal 2: Apakah huruf keempat dalam abjad?\n");
+    printf("a. b\n");
+    printf("b. d\n");
+    printf("c. a\n");
+    printf("d. c\n");
+    printf("Jawaban Anda (a/b/c/d): ");
+
+    char jawaban[10];
+    scanf("%s", jawaban);
+
+    if (strcmp(jawaban, "c") == 0)
+    {
+        printf("Jawaban Anda benar!\n");
+        *skor += 1;
+    }
+    else
+    {
+        printf("Jawaban Anda salah!\n");
+    }
+
+    printf("\n");
+}
+
+void soal3(int *skor)
+{
+    printf("Soal 3: Tentara apa yang ukurannya kecil-kecil??\n");
+    printf("a. Tentara sekutu\n");
+    printf("b. TNI\n");
+    printf("c. Tentara RI\n");
+    printf("d. Polri\n");
+    printf("Jawaban Anda (a/b/c/d): ");
+
+    char jawaban[10];
+    scanf("%s", jawaban);
+
+    if (strcmp(jawaban, "a") == 0)
+    {
+        printf("Jawaban Anda benar!\n");
+        *skor += 1;
+    }
+    else
+    {
+        printf("Jawaban Anda salah!\n");
+    }
+
+    printf("\n");
+}
+
+void soal4(int *skor)
+{
+    printf("Soal 4: Siapakah anggota kelompok ini\n");
+    printf("a. Semua cantik\n");
+    printf("b. l,k,r,m\n");
+    printf("c. z,v,t,u\n");
+    printf("d. m,m,r,s\n");
+    printf("Jawaban Anda (a/b/c/d): ");
+
+    char jawaban[10];
+    scanf("%s", jawaban);
+
+    if (strcmp(jawaban, "a") == 0)
+    {
+        printf("Jawaban Anda benar!\n");
+        *skor += 1;
+    }
+    else
+    {
+        printf("Jawaban Anda salah!\n");
+    }
+
+    printf("\n");
+}
+
+void soal5(int *skor)
+{
+    printf("Soal 5: Paus pembunuh adalah nama lain dari paus\n");
+    printf("a. Orcchid\n");
+    printf("b. Octo\n");
+    printf("c. Orca\n");
+    printf("d. Orphin\n");
+    printf("Jawaban Anda (a/b/c/d): ");
+
+    char jawaban[10];
+    scanf("%s", jawaban);
+
+    if (strcmp(jawaban, "c") == 0)
     {
         printf("Jawaban Anda benar!\n");
         *skor += 1;
